@@ -1,0 +1,13 @@
+@import './utils/vars';
+@import './utils/mixins';
+
+@import './base/reset';
+@import './base/common';
+
+@import './components/closeBtn';
+
+@import './layouts/header';
+@import './layouts/slider';
+@import './layouts/gallery';
+@import './layouts/footer';
+@import './layouts/modal';

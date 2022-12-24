@@ -1,0 +1,222 @@
+
+.header__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 230px;
+    padding-top: 40px;
+}
+
+.menu {
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 54px;
+}
+
+.menu__list {
+    display: flex;
+    align-items: center;
+    gap: 39px
+}
+
+.menu__link {
+@include fonts(500, 12, 14, false, uppercase);
+color: $whiteColor;
+
+    
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo__name {
+    display: none;
+}
+
+.search-form {
+    position: relative;
+    text-align: center;
+}
+
+.search-field {
+    width: 100%;
+    @include fonts(400, 14, 16);
+    
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 1px solid $whiteColor;
+    color: $whiteColor;
+
+    &::placeholder {
+        color: $whiteColor;
+    }
+}
+
+.search-field:hover,
+.search-field:focus {
+    border-bottom: 1px solid $accentColor;
+}
+
+.header-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/header/mobile/abstract-background-1.jpg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+ @include mq(retina) {
+    .header-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+            url(../images/header/mobile/abstract-background-1@2x.jpg);
+    }
+}
+
+.search-btn {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    background-color: transparent;
+
+}
+
+
+.library__btn-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+}
+
+.btn {
+    border: 1px solid $whiteColor;
+    border-radius: 5px;
+    width: 129.53px;
+    height: 44px;
+    @include fonts(500, 12, 16, false, uppercase);
+    font-style: normal;
+    color: $whiteColor;
+    &:hover,
+        &:focus {
+            border-color: $accentColor;
+            background-color: $accentColor;
+            color: $whiteColor;
+        }
+}
+
+.btn__library--active {
+    background: $accentColor;
+    border: none;
+}
+ @include mq(tab) {
+    .logo__name {
+        display: block;
+        margin-left: 8px;
+        font-style: normal;
+        @include fonts(500, 30, 35);
+        
+        color: $whiteColor;
+    }
+        .header__container{
+            min-height: 216px;
+        }
+
+    .header-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+            url(../images/header/tablet/abstract-background-1.jpg);
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+    @include mq(retina) {
+        .header-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+                url(../images/header/tablet/abstract-background-1@2x.jpg);
+        }
+    }
+
+    .search-form {
+
+        width: 336px;
+        margin-right: auto;
+        margin-left: auto;
+
+    }
+
+}
+@include mq(desk) {
+    .header-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+            url(../images/header/desktop/abstract-background-1.jpg);
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+   @include mq(retina) {
+        .header-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+                url(../images/header/desktop/abstract-background-1@2x.jpg);
+        }
+    }
+
+    .search-form {
+
+        width: 394px;
+        margin-right: auto;
+        margin-left: auto;
+
+    }
+}
+
+.menu__link--active {
+    position: relative;
+    display: block;
+}
+
+.menu__link--active::after {
+    position: absolute;
+    content: '';
+    display: block;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    background-color: $underlineColor;
+    
+
+    transform: scaleX(1);
+}
+.search-icon{
+    fill: $whiteColor;
+}
+.search-icon:hover,
+.search-icon:focus{
+    fill: $accentColor;
+}
+.js-warning {
+    position: absolute;
+    @include fonts(500, 14, 16);
+   
+    color: $underlineColor;
+    top: 36px;
+    left: 113px;
+}
+.js-search-results {
+    position: absolute;
+    @include fonts(500, 14, 16);
+
+    color: $underlineColor;
+    top: 36px;
+    left: 113px;
+}
