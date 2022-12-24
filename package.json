@@ -2,10 +2,10 @@
   "name": "filmoteka",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://github.com/Klerk777/filmoteka",
+  "homepage": "https://github.com/pdubovskyi/testproject",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /filmoteka/"
+    "build": "parcel build src/*.html --public-url /testproject/"
   },
   "repository": {
     "type": "git",
